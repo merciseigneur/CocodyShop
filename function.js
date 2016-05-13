@@ -2,6 +2,7 @@ $(function() {
 
 
 
+/*
 		    var datas = liste_clients.results;
 			
 			var contenu ='';
@@ -33,13 +34,12 @@ $(function() {
 			$('#listeClient .ui-listview').listview();
 			$('#listeClient .collapse').collapsible();
 			
-		
+*/		
 
-/*
 $.ajax({
 		type: 'GET',
 		dataType: "json",
-		url: "http://localhost/gestionCommandeServeur/enregistrement.php",
+		url: "http://angelsconceptions.com/gestionCommandeServeur/enregistrement.php",
 		timeout:30000,
 		crossDomain: false,
 		success: function (responseData, textStatus, jqXHR) {
@@ -74,13 +74,13 @@ $.ajax({
 			$('#listeClient .collapse').collapsible();
 			
 		}, error :function (responseData, textStatus, errorThrown) {
-			alert("erreur"+textStatus);
-			alert(responseData);
+			//alert("erreur"+textStatus);
+			//alert(responseData);
 		}
-		});*/
+		});
 		
 	$("#formulaire").submit(function(){
-        $.ajax({type:"POST", data: $(this).serialize(), url:"http://localhost/gestionCommandeServeur/commande.php",
+        $.ajax({type:"POST", data: $(this).serialize(), url:"http://angelsconceptions.com/gestionCommandeServeur/commande.php",
             success: function(data){
                 $("#post").html(data);
 				 
@@ -94,7 +94,7 @@ $.ajax({
     });	
 		
 $("#formlivraison").submit(function(){
-        $.ajax({type:"POST", data: $(this).serialize(), url:"http://localhost/gestionCommandeServeur/livraison.php",
+        $.ajax({type:"POST", data: $(this).serialize(), url:"http://angelsconceptions.com/gestionCommandeServeur/livraison.php",
             success: function(data){
                 $("#postlivraison").html(data);
 				 
